@@ -1,0 +1,114 @@
+:root {
+  --blue: #001e4b;
+  --ligthBlue: #10cbe9;
+  --gray: #f1f5f8; }
+
+a:hover {
+  text-decoration: none; }
+
+.header {
+  background: blue;
+  height: 100px; }
+  .header img {
+    height: auto; }
+    @media only screen and (max-width: 640px) {
+      .header img {
+        width: 100%; } }
+  @media only screen and (max-width: 640px) {
+    .header {
+      height: 80px; } }
+
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(50%); }
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%); } }
+
+/* large - display 3 */
+@media (min-width: 992px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33%); }
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33%); } }
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none; }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block; } }
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex; }
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+  transform: translateX(0); }
+
+.carousel-nav-icon {
+  height: 48px;
+  width: 48px; }
+  @media only screen and (max-width: 640px) {
+    .carousel-nav-icon {
+      width: 36px;
+      height: 36px; } }
+  .carousel-nav-icon img {
+    width: 100%; }
+
+.carousel-item .col,
+.carousel-item .col-sm,
+.carousel-item .col-md,
+.carousel-item .col-lg {
+  margin: 8px;
+  height: 200px;
+  background-size: cover;
+  background-position: center center; }
+  @media only screen and (max-width: 640px) {
+    .carousel-item .col,
+    .carousel-item .col-sm,
+    .carousel-item .col-md,
+    .carousel-item .col-lg {
+      height: auto; } }
+
+.carousel-item img {
+  width: 100%; }
+
+.slide--2 .col,
+.slide--2 .col-sm,
+.slide--2 .col-md {
+  height: 150px; }
+
+.degree {
+  background: linear-gradient(to right, var(--blue), var(--ligthBlue)); }
+
+.textSpan {
+  color: var(--ligthBlue); }
+
+.grayBg {
+  background-color: var(--gray); }
+
+.bgAyuda {
+  color: white;
+  background-image: url(../img/fondo_ayuda.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.ayuda_enlace {
+  border: dotted 2px var(--gray); }
+
+.on {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(16, 203, 233, 0.9);
+  opacity: 0;
+  transition: ease all .5s; }
+  .on:hover {
+    opacity: 1; }
