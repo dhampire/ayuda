@@ -7,6 +7,8 @@
    <title>Ayuda una Causa </title>
    <link rel="stylesheet" href="./css/bootstrap.css">
    <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/slick.css">
+   <link rel="stylesheet" href="./css/slick-theme.css">
 </head>
 
 <body>
@@ -190,42 +192,36 @@
          <div class="my-5 text-center container-fluid">
             <div class="row d-flex align-items-center">
                <div class="col-1 d-flex align-items-center justify-content-center">
-                  <a href="#carouselEmp" role="button" data-slide="prev">
+                  <!-- <a href="#carouselEmp" role="button" data-slide="prev">
                      <div class="carousel-nav-icon">
                         <img src="./img/flecha_ant.png" />
                      </div>
-                  </a>
+                  </a> -->
                </div>
                <div class="col-10">
                   <!--Start carousel-->
                   <div id="carouselEmp" class="carousel slide w-100" data-ride="carousel">
                     <div class="carousel-inner w-100" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-4 col-md-6">
-                                <img class="img-fluid" src="./img/apoyan/empresa1.png">
-                            </div>
+                      <div class="multiple-items">
+                        <div class="col-lg-4 col-md-6">
+                          <img class="img-fluid" src="./img/apoyan/empresa1.png">
                         </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6">
-                                <img class="img-fluid" src="./img/apoyan/empresa2.png">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6">
-                                <img class="img-fluid" src="./img/apoyan/empresa3.png">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg-4 col-md-6">
-                                <img class="img-fluid" src="./img/apoyan/empresa4.png">
-                            </div>
-                        </div>
+                        <div class="col-lg-4 col-md-6">
+                          <img class="img-fluid" src="./img/apoyan/empresa2.png">
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <img class="img-fluid" src="./img/apoyan/empresa3.png">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <img class="img-fluid" src="./img/apoyan/empresa4.png">
+                    </div>
+                      </div>
 
                     </div>
                 </div>
                   <!--End carousel-->
                </div>
-               <div class="col-1 d-flex align-items-center justify-content-center"><a href="#carouselEmp"
+               <!-- <div class="col-1 d-flex align-items-center justify-content-center"><a href="#carouselEmp"
                      data-slide="next">
                      <div class="carousel-nav-icon">
                         <div class="carousel-nav-icon">
@@ -233,7 +229,7 @@
                         </div>
                      </div>
                   </a>
-               </div>
+               </div> -->
             </div>
          </div>
 
@@ -256,7 +252,46 @@
    <script src="./js/bootstrap.min.js" />
    </script>
    <script src="./js/popper.min.js"></script>
-
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script>
+     $('.multiple-items').slick({
+       dots: true,
+     infinite: true,
+     speed: 300,
+     dots: false,
+     autoplay: true,
+     autoplaySpeed: 1000,
+     slidesToShow: 4,
+     slidesToScroll: 1,
+     responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 3,
+           slidesToScroll: 1,
+           infinite: true,
+         }
+       },
+       {
+         breakpoint: 600,
+         settings: {
+           slidesToShow: 2,
+           slidesToScroll: 1
+         }
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1
+         }
+       }
+       // You can unslick at a given breakpoint now by adding:
+       // settings: "unslick"
+       // instead of a settings object
+     ]
+   });
+     </script>
    <script>
 
 // $('#myCarousel').carousel({
