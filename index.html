@@ -18,7 +18,7 @@
             <a href="#"><img class="pt-2" src="./img/logo_ayuda_cabecera.png" style="max-width: 130px;" /></a>
          </div>
          <div class="col-6 d-flex align-items-center justify-content-end">
-            <a href="https://multipago.bo"><img src="./img/nuevo-logo-multipago.svg"  style="max-width: 150px;" /></a>
+            <a href="https://multipago.bo"><img src="./img/nuevo-logo-multipago.png"  style="max-width: 150px;" /></a>
             <!-- <a href="https://multipago.bo"><img src="./img/multipago.svg" style="max-width: 150px;"/></a> -->
          </div>
       </header>
@@ -42,10 +42,10 @@
                </div>
                <div class="col-10" style="font-size: .8rem;">
                   <!--Start carousel-->
-                  <div id="myCarousel" class="carousel w-100" data-ride="carousel">
+                  <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
                      <div class="carousel-inner w-100" role="listbox">
                          <div class="carousel-item active">
-                             <div class="col-lg-4 col-md-6">
+                             <div class="col-lg-4 col-md-6 p-0">
                                <div
                                class="col-12 col-md d-flex align-items-center justify-content-center shadow-sm bg-white rounded"
                              >
@@ -84,7 +84,7 @@
                              </div>
                          </div>
                          <div class="carousel-item">
-                             <div class="col-lg-4 col-md-6">
+                             <div class="col-lg-4 col-md-6 p-0">
                                <div
                                class="col-12 col-md d-flex align-items-center justify-content-center shadow-sm bg-white rounded"
                              >
@@ -123,7 +123,7 @@
                              </div>
                          </div>
                          <div class="carousel-item">
-                             <div class="col-lg-4 col-md-6">
+                             <div class="col-lg-4 col-md-6 p-0">
                                <div
                                class="col-12 col-md d-flex align-items-center justify-content-center shadow-sm bg-white rounded"
                              >
@@ -295,9 +295,15 @@
      </script>
    <script>
 
-// $('#myCarousel').carousel({
-//     interval: 5000
-// })
+    function checkWidth() {
+        if ($(window).width() < 514) {
+          $('#myCarousel').removeClass('slide');
+        } else {
+          $('#myCarousel').addClass('slide');
+        }
+    }
+
+    $(window).resize(checkWidth);
 
 $('.carousel .carousel-item').each(function() {
     var minPerSlide = 4;
