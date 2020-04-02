@@ -109,7 +109,8 @@ a:hover {
   background-image: url(../img/fondo_ayuda.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+  padding: 150px 0 !important; }
 
 .ayuda_enlace {
   border: dotted 2px var(--gray); }
@@ -127,3 +128,13 @@ a:hover {
 
 .text-primary {
   color: #0D6FBB !important; }
+
+@media only screen and (max-width: 640px) {
+  .mMovil {
+    margin: 1rem 0 0 0; } }
+
+.pad-10 {
+  padding-right: 10px; }
+  @media only screen and (max-width: 640px) {
+    .pad-10 {
+      padding: 0; } }
