@@ -110,7 +110,7 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 150px 0 !important; }
+  padding: 100px 0 !important; }
 
 .ayuda_enlace {
   border: dotted 2px var(--gray); }
