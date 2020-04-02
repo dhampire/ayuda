@@ -75,8 +75,20 @@ a:hover {
     .carousel-item .col-lg {
       height: auto; } }
 
-.carousel-item img {
-  width: 100%; }
+#carouselEmp > .carousel-item .col,
+#carouselEmp > .carousel-item .col-sm,
+#carouselEmp > .carousel-item .col-md,
+#carouselEmp > .carousel-item .col-lg {
+  margin: 8px;
+  height: 150px;
+  background-size: cover;
+  background-position: center center; }
+  @media only screen and (max-width: 640px) {
+    #carouselEmp > .carousel-item .col,
+    #carouselEmp > .carousel-item .col-sm,
+    #carouselEmp > .carousel-item .col-md,
+    #carouselEmp > .carousel-item .col-lg {
+      height: auto; } }
 
 .slide--2 .col,
 .slide--2 .col-sm,
