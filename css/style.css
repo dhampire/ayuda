@@ -124,3 +124,6 @@ a:hover {
   transition: ease all .5s; }
   .on:hover {
     opacity: 1; }
+
+.text-primary {
+  color: #0D6FBB !important; }
