@@ -80,7 +80,7 @@ a:hover {
 #carouselEmp > .carousel-item .col-md,
 #carouselEmp > .carousel-item .col-lg {
   margin: 8px;
-  height: 150px;
+  height: 120px;
   background-size: cover;
   background-position: center center; }
   @media only screen and (max-width: 640px) {
