@@ -94,6 +94,17 @@ a:hover {
   .on:hover {
     opacity: 1; }
 
+.on--white {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: ease all .5s; }
+  .on--white:hover {
+    opacity: 1; }
+
 .text-primary {
   color: #0D6FBB !important; }
 
