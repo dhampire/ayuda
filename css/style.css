@@ -3,6 +3,9 @@
   --ligthBlue: #10cbe9;
   --gray: #f1f5f8; }
 
+body {
+  font-family: 'Montserrat', sans-serif; }
+
 a:hover {
   text-decoration: none; }
 
@@ -27,36 +30,6 @@ a:hover {
       height: 36px; } }
   .carousel-nav-icon img {
     width: 100%; }
-
-.carousel-item .col,
-.carousel-item .col-sm,
-.carousel-item .col-md,
-.carousel-item .col-lg {
-  margin: 8px;
-  height: auto;
-  background-size: cover;
-  background-position: center center; }
-  @media only screen and (max-width: 640px) {
-    .carousel-item .col,
-    .carousel-item .col-sm,
-    .carousel-item .col-md,
-    .carousel-item .col-lg {
-      height: auto; } }
-
-#carouselEmp > .carousel-item .col,
-#carouselEmp > .carousel-item .col-sm,
-#carouselEmp > .carousel-item .col-md,
-#carouselEmp > .carousel-item .col-lg {
-  margin: 8px;
-  height: 120px;
-  background-size: cover;
-  background-position: center center; }
-  @media only screen and (max-width: 640px) {
-    #carouselEmp > .carousel-item .col,
-    #carouselEmp > .carousel-item .col-sm,
-    #carouselEmp > .carousel-item .col-md,
-    #carouselEmp > .carousel-item .col-lg {
-      height: auto; } }
 
 .slide--2 .col,
 .slide--2 .col-sm,
