@@ -115,7 +115,7 @@
               >
                 <div class="text-center">
                   <p class="font-weight-bold pt-4">TOTAL RECAUDADO (Bs.)</p>
-                  <span class="font-weight-bold color text-primary">1740</span>
+                  <span id="donaciones" class="font-weight-bold color text-primary"></span>
                   <p class="border-top mt-3 pt-4">
                     Dona hasta el <br />
                     <span class="text-secondary">31/05/2020</span>
@@ -249,6 +249,27 @@
        // instead of a settings object
      ]
    });
+     </script>
+     <script>
+     const $donaciones = document.querySelector("#donaciones");
+      function getDonaciones(total) {
+        console.log(total);
+        var totalConFijo = total + 97300;
+        $donaciones.innerHTML = numberWithCommas(totalConFijo);
+      }
+      function numberWithCommas(x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+      }
+
+      let url = "https://multipago.bo/api/v2/cainco-summary-report";
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((json) => {
+          getDonaciones(json.data.total);
+        });
      </script>
 </body>
 
