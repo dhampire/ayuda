@@ -65,7 +65,7 @@
                   <img class="w-100" src="./img/slide/foto2.png" alt="" />
                 </a>
                 <div class="text-dark position-absolute on--white my-auto d-flex align-items-center justify-content-center">
-                  <span class="px-2 text-center">Destinado para el personal médico de hospitales públicos de Santa Cruz que no tiene la ropa adecuada e insumos que los proteja de contagiarse y contagiar el coronavirus. <br><strong class="mt-2 d-block">DONA <a href="https://multipago.bo/protegeunavida">AQUÍ</a></strong> </span>
+                  <span class="px-2 text-center">Destinado para el personal médico de hospitales públicos de Santa Cruz que no tiene la ropa adecuada e insumos que los proteja de contagiarse y contagiar el coronavirus. <br><strong class="mt-2 d-block">DONA <a style="color: #10CBE9" href="https://multipago.bo/protegeunavida">AQUÍ</a></strong> </span>
                   
                 </div>
               </div>
@@ -74,7 +74,7 @@
               >
                 <div class="text-center">
                   <p class="font-weight-bold pt-4">TOTAL RECAUDADO (Bs.)</p>
-                  <span class="font-weight-bold color text-primary">1740</span>
+                  <span class="ayudaRecaudado font-weight-bold color text-primary">1712340</span>
                   <p class="border-top mt-3 pt-4">
                    Dona hasta el <br />
                     <span class="text-secondary">31/05/2020</span>
@@ -107,7 +107,7 @@
                   <img class="w-100 pt-2" src="./img/slide/foto3.png" alt="" />
                 </a>
                 <div class="text-dark position-absolute on--white my-auto d-flex align-items-center justify-content-center">
-                  <span class="px-2 text-center">Destinado para la compra de víveres para el Banco de Alimentos Solidario y así atender a las familias más vulnerables de nuestra sociedad. <br><strong class="mt-2 d-block">DONA <a href="https://multipago.bo/demosdecorazon">AQUÍ</a></strong> </span>
+                  <span class="px-2 text-center">Destinado para la compra de víveres para el Banco de Alimentos Solidario y así atender a las familias más vulnerables de nuestra sociedad. <br><strong class="mt-2 d-block">DONA <a style="color: #10CBE9" href="https://multipago.bo/demosdecorazon">AQUÍ</a></strong> </span>
                 </div>
               </div>
               <div
@@ -115,7 +115,7 @@
               >
                 <div class="text-center">
                   <p class="font-weight-bold pt-4">TOTAL RECAUDADO (Bs.)</p>
-                  <span id="donaciones" class="font-weight-bold color text-primary"></span>
+                  <span class="ayudaRecaudado font-weight-bold color text-primary">3965645</span>
                   <p class="border-top mt-3 pt-4">
                     Dona hasta el <br />
                     <span class="text-secondary">31/05/2020</span>
@@ -244,33 +244,24 @@
            slidesToScroll: 1
          }
        }
-       // You can unslick at a given breakpoint now by adding:
-       // settings: "unslick"
-       // instead of a settings object
      ]
    });
      </script>
      <script>
-     const $donaciones = document.querySelector("#donaciones");
-      function getDonaciones(total) {
-        console.log(total);
-        var totalConFijo = total + 97300;
-        $donaciones.innerHTML = numberWithCommas(totalConFijo);
-      }
-      function numberWithCommas(x) {
-        var parts = x.toString().split(".");
-        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        return parts.join(".");
-      }
 
-      let url = "https://multipago.bo/api/v2/cainco-summary-report";
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ".");
+        }
 
-      fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-          getDonaciones(json.data.total);
+        $('.ayudaRecaudado').each(function(){
+        var monto = $(this).html();
+        montoFinal = (Math.round(monto * 100) / 100).toFixed(2).replace(".", ",");
+        formater = numberWithCommas(montoFinal)
+        
+        $(this).html(formater)
+
         });
-     </script>
+      </script>
 </body>
 
 </html>
